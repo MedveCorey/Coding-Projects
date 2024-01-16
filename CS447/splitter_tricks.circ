@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.7.1" version="1.0">
+This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+<lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="8"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="1"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="1"/>
+      <a name="bit6" val="2"/>
+      <a name="bit7" val="2"/>
+    </tool>
+    <tool name="Probe">
+      <a name="facing" val="west"/>
+      <a name="labelloc" val="east"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#Base" name="6">
+    <tool name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif bold 12"/>
+      <a name="halign" val="left"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <main name="main"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="6" map="Button2" name="Menu Tool"/>
+    <tool lib="6" map="Button3" name="Menu Tool"/>
+    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="6" name="Poke Tool"/>
+    <tool lib="6" name="Edit Tool"/>
+    <tool lib="6" name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif bold 12"/>
+      <a name="halign" val="left"/>
+      <a name="valign" val="base"/>
+    </tool>
+    <sep/>
+    <tool lib="0" name="Pin">
+      <a name="tristate" val="false"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+  </toolbar>
+  <circuit name="main">
+    <a name="circuit" val="main"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(130,220)" to="(160,220)"/>
+    <wire from="(140,230)" to="(140,240)"/>
+    <wire from="(80,90)" to="(80,100)"/>
+    <wire from="(120,110)" to="(120,120)"/>
+    <wire from="(110,120)" to="(110,130)"/>
+    <wire from="(80,80)" to="(80,90)"/>
+    <wire from="(60,90)" to="(80,90)"/>
+    <wire from="(100,110)" to="(120,110)"/>
+    <wire from="(140,240)" to="(160,240)"/>
+    <wire from="(130,230)" to="(140,230)"/>
+    <wire from="(140,140)" to="(150,140)"/>
+    <wire from="(100,230)" to="(110,230)"/>
+    <wire from="(100,120)" to="(110,120)"/>
+    <wire from="(110,130)" to="(120,130)"/>
+    <wire from="(80,90)" to="(90,90)"/>
+    <wire from="(100,320)" to="(110,320)"/>
+    <comp lib="0" loc="(160,220)" name="Probe">
+      <a name="facing" val="west"/>
+      <a name="label" val="lo nybble"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="6" loc="(18,183)" name="Text">
+      <a name="text" val="&quot;Bit Width In&quot; controls how many bits are on the combined end."/>
+      <a name="font" val="SansSerif bold 12"/>
+      <a name="halign" val="left"/>
+    </comp>
+    <comp lib="6" loc="(114,88)" name="Text">
+      <a name="text" val="&quot;Centered&quot; is smallest."/>
+      <a name="font" val="SansSerif bold 12"/>
+      <a name="halign" val="left"/>
+    </comp>
+    <comp lib="6" loc="(115,333)" name="Text">
+      <a name="text" val="Set the bits you don't care about to &quot;None.&quot;"/>
+      <a name="font" val="SansSerif bold 12"/>
+      <a name="halign" val="left"/>
+    </comp>
+    <comp lib="6" loc="(139,119)" name="Text">
+      <a name="text" val="Select it and use the arrow keys to change direction."/>
+      <a name="font" val="SansSerif bold 12"/>
+      <a name="halign" val="left"/>
+    </comp>
+    <comp lib="0" loc="(110,320)" name="Splitter">
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="8"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit3" val="none"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="0"/>
+    </comp>
+    <comp lib="0" loc="(80,100)" name="Splitter">
+      <a name="appear" val="right"/>
+    </comp>
+    <comp lib="0" loc="(150,140)" name="Probe">
+      <a name="facing" val="west"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(110,230)" name="Splitter">
+      <a name="incoming" val="8"/>
+      <a name="appear" val="center"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="1"/>
+      <a name="bit6" val="1"/>
+      <a name="bit7" val="1"/>
+    </comp>
+    <comp lib="6" loc="(15,40)" name="Text">
+      <a name="text" val="They all do the same thing, but might fit better."/>
+      <a name="font" val="SansSerif bold 12"/>
+      <a name="halign" val="left"/>
+    </comp>
+    <comp lib="0" loc="(90,90)" name="Splitter">
+      <a name="appear" val="center"/>
+    </comp>
+    <comp lib="0" loc="(100,320)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="6" loc="(19,200)" name="Text">
+      <a name="text" val="&quot;Fan Out&quot; controls how many values the combined value is split into."/>
+      <a name="font" val="SansSerif bold 12"/>
+      <a name="halign" val="left"/>
+    </comp>
+    <comp lib="0" loc="(80,80)" name="Splitter"/>
+    <comp lib="0" loc="(130,310)" name="Probe">
+      <a name="facing" val="west"/>
+      <a name="label" val="sign bit"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="6" loc="(174,143)" name="Text">
+      <a name="text" val="You can change the order of the bits, too."/>
+      <a name="font" val="SansSerif bold 12"/>
+      <a name="halign" val="left"/>
+    </comp>
+    <comp lib="0" loc="(140,140)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="appear" val="right"/>
+      <a name="bit0" val="1"/>
+      <a name="bit1" val="0"/>
+    </comp>
+    <comp lib="0" loc="(60,90)" name="Pin">
+      <a name="width" val="2"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(100,230)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(160,240)" name="Probe">
+      <a name="facing" val="west"/>
+      <a name="label" val="hi nybble"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="6" loc="(20,289)" name="Text">
+      <a name="text" val="A &quot;Fan Out&quot; of 1 is great for extracting a single value or bit."/>
+      <a name="font" val="SansSerif bold 12"/>
+      <a name="halign" val="left"/>
+    </comp>
+    <comp lib="6" loc="(16,25)" name="Text">
+      <a name="text" val="Try changing the appearance."/>
+      <a name="font" val="SansSerif bold 12"/>
+      <a name="halign" val="left"/>
+    </comp>
+  </circuit>
+</project>

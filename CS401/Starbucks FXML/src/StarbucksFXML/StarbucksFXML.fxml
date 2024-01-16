@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="425.0" prefWidth="758.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StarbucksFXML.StarbucksFXMLController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="328.0" prefWidth="564.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="120.0">
+               <children>
+                  <VBox id="Coffee Box" prefHeight="100.0" prefWidth="142.0" spacing="3.0">
+                     <children>
+                        <Label graphicTextGap="0.0" text="Brewed Coffee" />
+                        <RadioButton fx:id="blondeRadio" mnemonicParsing="false" onAction="#updatePurchaseDescription" selected="true" text="Blonde Roast">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="CoffeeRadioGroup1" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="decafRadio" mnemonicParsing="false" onAction="#updatePurchaseDescription" text="Decaf Pike" toggleGroup="$CoffeeRadioGroup1" />
+                        <RadioButton fx:id="caffeMistoRadio" mnemonicParsing="false" onAction="#updatePurchaseDescription" text="Caffe Misto" toggleGroup="$CoffeeRadioGroup1" />
+                        <RadioButton fx:id="hotChocolateRadio" mnemonicParsing="false" text="Hot Chocolate" toggleGroup="$CoffeeRadioGroup1" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="100.0" prefWidth="116.0">
+                     <children>
+                        <Label text="Extras" />
+                        <CheckBox fx:id="sugar" mnemonicParsing="false" onAction="#updatePurchaseDescription" text="Sugar" />
+                        <CheckBox fx:id="spice" mnemonicParsing="false" onAction="#updatePurchaseDescription" text="Spice" />
+                        <CheckBox fx:id="honey" mnemonicParsing="false" onAction="#updatePurchaseDescription" text="Honey" />
+                        <CheckBox fx:id="cream" mnemonicParsing="false" onAction="#updatePurchaseDescription" text="Cream" />
+                     </children>
+                  </VBox>
+                  <VBox id="Coffee Box" alignment="CENTER_LEFT" prefHeight="113.0" prefWidth="207.0" spacing="3.0">
+                     <children>
+                        <Label graphicTextGap="0.0" text="Veteran Status" />
+                        <RadioButton fx:id="vetRadioButton" mnemonicParsing="false" onAction="#updatePurchaseDescription" text="Veteran">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="VeteranRadioGroup" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="nonVetRadioButton" mnemonicParsing="false" onAction="#updatePurchaseDescription" selected="true" text="Non-Veteran" toggleGroup="$VeteranRadioGroup" />
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="122.0" text="Promotional Code">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="promoApplyButton" mnemonicParsing="false" onAction="#updatePurchaseDescription" text="Apply" />
+                           </children>
+                        </HBox>
+                        <TextField fx:id="promoTextField" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Label />
+            <HBox prefHeight="20.0" prefWidth="551.0" spacing="10.0">
+               <children>
+                  <Label text="Order Summary">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="resetButton" mnemonicParsing="false" onAction="#onResetButtonClicked" text="Reset Order">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <TextArea fx:id="purchaseDescription" editable="false" prefHeight="182.0" prefWidth="518.0" />
+         </children>
+         <BorderPane.margin>
+            <Insets left="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
