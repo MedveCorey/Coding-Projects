@@ -6,8 +6,7 @@
     <meta name="author" content="Corey Medve" />
     <meta name="description"
         content="This file is intended to serve as a practice using links between multiple HTML files">
-    <link rel="stylesheet" href="Pratice_style.css">
-    <script src="Practice.js" defer></script>
+    <link rel="stylesheet" href="style.css">
     <title>Blog</title>
 </head>
 
@@ -17,56 +16,58 @@
         <h1>Blog Posts</h1>
     </header>
 
-    <hr />
-
-    <nav>
+    <nav class="navbar">
         <a href="Index.html">Home</a>
+        <a href="Blog.html" title="Where to access all blog posts about my coding journey">Blog</a>
         <a href="About.html">About</a>
+        <div class="dropdown">
+            <button class="dropbtn">Games</button>
+            <div class="dropdown-content">
+                <a href="Games/GuessTheNumber.Html">Guess The Number</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
     </nav>
 
-    <hr />
-
     <main>
-        
+
         <article>
-            <a href="BlogPosts/DayThree.html"> 
+            <a class="BlogPost" href="BlogPosts/DayThree.html">
                 <h2>Day Three</h2>
             </a>
             <p>This is where I talk about tungsten cubes</p>
-            
-            </article>
+
+        </article>
         <hr />
 
         <article>
-            <a href="BlogPosts/DayTwo.html">
+            <a class="BlogPost" href="BlogPosts/DayTwo.html">
                 <h2>Day Two</h2>
             </a>
-            <p>This is where I talk about cards</p>
+            <p>Embedding Content</p>
         </article>
-        
+
         <hr />
-        
+
         <article>
-            <a href="BlogPosts/DayOne.html">
+            <a class="BlogPost" href="BlogPosts/DayOne.html">
                 <h2>Day One</h2>
             </a>
 
             <p>Introductions and Creating the First Pages</p>
         </article>
-        
-
-        <hr />
 
     </main>
 
+    <footer class="navbar">
+        <a href="mailto:coreyjacob2002@gmail.com">Email</a>
+    </footer>
+
+
 </body>
 
-<hr />
 
-<footer>
-    <a href="mailto:coreyjacob2002@gmail.com">Email</a>
-</footer>
 
-<hr />
 
 </html>
