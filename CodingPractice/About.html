@@ -6,6 +6,7 @@
     <meta name="author" content="Corey Medve" />
     <meta name="description"
         content="This is the first in a series documenting my practice with HTML, JavaScript and CSS">
+    <link rel="stylesheet" href="style.css">
     <title>About</title>
 </head>
 
@@ -14,14 +15,19 @@
         <h1>About</h1>
     </header>
 
-    <hr />
-    
-    <nav>
+    <nav class="navbar">
         <a href="Index.html">Home</a>
         <a href="Blog.html" title="Where to access all blog posts about my coding journey">Blog</a>
+        <a href="About.html">About</a>
+        <div class="dropdown">
+            <button class="dropbtn">Games</button>
+            <div class="dropdown-content">
+                <a href="Games/GuessTheNumber.Html">Guess The Number</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
     </nav>
-
-    <hr />
 
     <main>
         <h2>Day Two Progress</h2>
@@ -34,14 +40,12 @@
         </p>
     </main>
 
+    <footer class="navbar">
+        <a href="mailto:coreyjacob2002@gmail.com">Email</a>
+    </footer>
+
 </body>
 
-<hr />
 
-<footer>
-    <a href="mailto:coreyjacob2002@gmail.com">Email</a>
-</footer>
-
-<hr />
 
 </html>

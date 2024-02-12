@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
+<!--Page Info-->
 <head>
     <meta charset="utf-8" />
     <meta name="author" content="Corey Medve" />
     <meta name="description"
         content="This is the another post in a series documenting my practice with HTML, JavaScript and CSS">
+        <link rel="stylesheet" href="../style.css">
     <title>Day Three</title>
 </head>
 
+
 <body>
+
+    <!--Page Title-->
     <header>
         <h1>Day Three</h1>
     </header>
 
-    <nav>
+    <!--top vaigation bar-->
+    <nav class="navbar">
+
         <a href="../Index.html">Home</a>
         <a href="../Blog.html" title="Where to access all blog posts about my coding journey">Blog</a>
         <a href="../About.html">About</a>
 
+        <div class="dropdown">
+
+            <button class="dropbtn">Games</button>
+
+            <div class="dropdown-content">
+                <a href="../Games/GuessTheNumber.Html">Guess The Number</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+
+        </div>
     </nav>
 
-    <main>
+    <!-- Main Content of the Page-->
+    <main class="BlogPost">
         <article>
             <h2>Day Three Progress</h2>
             <p>
@@ -36,7 +54,7 @@
             </p>
         </article>
 
-        <aside>
+        <aside class="sidebar">
             <h2>Related</h2>
             <ul>
                 <li><a href="DayOne.html">Day One</a></li>
@@ -50,7 +68,8 @@
 
 </body>
 
-<footer>
+<!-- Lower Contact Bar-->
+<footer class="navbar">
     <a href="mailto:coreyjacob2002@gmail.com">Email</a>
 </footer>
 
