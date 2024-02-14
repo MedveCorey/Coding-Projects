@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block title %}
+Blog Posts
+{% endblock %}
+{% block content %}
+<article>
+    <a class="BlogPost" href="{{url_for('getBlogPost', filename='DayThree.html')}}">
+        <h2>Day Three</h2>
+    </a>
+    <p>Flask and Jinja</p>
+
+</article>
+<hr />
+
+<article>
+    <a class="BlogPost" href="{{url_for('getBlogPost', filename='DayTwo.html')}}">
+        <h2>Day Two</h2>
+    </a>
+    <p>Embedding Content</p>
+</article>
+
+<hr />
+
+<article>
+    <a class="BlogPost" href="{{url_for('getBlogPost', filename='DayOne.html')}}">
+        <h2>Day One</h2>
+    </a>
+
+    <p>Introductions and Creating the First Pages</p>
+</article>
+{% endblock %}

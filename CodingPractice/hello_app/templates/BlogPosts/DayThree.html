@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block title %}
+Day Three
+{% endblock %}
+{% block content %}
+<main class="BlogPost">
+    <article>
+        <h2>Day Three Progress</h2>
+        <p>
+            Today I started working with Flask and Jinja to make more properl developed pages I also learned about code
+            snippets and the layouts which makes making these posts not as repetitive having to create a similar layout
+            over and over again.
+        </p>
+    </article>
+
+    <article>
+        <h2>Thoughts and Feelings</h2>
+        <p>
+            while struggling a little bit to get the routes properly set up once set up it allowed for an easy way to setup things.
+            I also found it interesting being able to test them on a testing server rather than just navigating the files in there respective directories
+        </p>
+    </article>
+
+    <aside class="sidebar">
+        <h2>Related</h2>
+        <ul>
+            <li><a href="{{url_for('getBlogPost', filename='DayOne.html')}}">Day One</a></li>
+            <li><a href="{{url_for('getBlogPost', filename='DayTwo.html')}}">Day Two</a></li>
+            <li><a href="{{url_for('getBlogPost', filename='DayFour.html')}}">Day Four</a></li>
+        </ul>
+
+    </aside>
+
+</main>
+{% endblock %}
