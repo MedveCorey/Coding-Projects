@@ -10,7 +10,7 @@
             "request": "launch",
             "module": "flask",
             "env": {
-                "FLASK_APP": "CodingPractice.hello_app.webapp.py",
+                "FLASK_APP": "CS1520.Recitation.fl08_model.py",
             },
             "args": [
                 "run",
