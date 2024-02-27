@@ -10,7 +10,7 @@
             "request": "launch",
             "module": "flask",
             "env": {
-                "FLASK_APP": "CS1520.Recitation.fl08_model.py",
+                "FLASK_APP": "CS1520.Recitation.fl04_sql_alchemy.py",
             },
             "args": [
                 "run",

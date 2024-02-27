@@ -141,7 +141,7 @@ def check_command():
 	'''
 	forests_in_pa = db.session.query(Forest).join(Coverage).filter(Coverage.state_name=='PA').all()
 	for forest in forests_in_pa:
-		print(f"Forest located in VA: {forest.forest_name}")
+		print(f"Forest located in PA: {forest.forest_name}")
 
 	'''
 	(5) find and print the number of forests for each state in descending order (hint: use func.count)
