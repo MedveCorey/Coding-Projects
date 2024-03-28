@@ -1,6 +1,7 @@
 import os
 from flask import Flask, render_template, send_from_directory
 from datetime import datetime
+from flask_sqlalchemy import SQLAlchemy
 from . import app
 
 @app.route("/")
